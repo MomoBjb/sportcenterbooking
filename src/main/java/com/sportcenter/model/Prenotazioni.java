@@ -18,6 +18,7 @@ public class Prenotazioni {
     private LocalDateTime dataOra;
     private String stato;
 
+
         @OneToOne
     @JoinColumn(name = "Pagament_id")
     private Pagamento pagamento;
@@ -50,6 +51,22 @@ public class Prenotazioni {
     }
     public void setStato(String stato) {
         this.stato = stato;
+    }
+    public CampoSportivo getCampoSportivo() {
+        return campoSportivo;
+    }
+    public void setCampoSportivo(CampoSportivo campoSportivo) {
+        this.campoSportivo = campoSportivo;
+    }
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
+    }public Pagamento getPagamento() {
+        return pagamento;
+    }
+    public void setUtente(Utente utente) {
+        this.utente = utente;
+    }public Utente getUtente() {
+        return utente;
     }
 
     
